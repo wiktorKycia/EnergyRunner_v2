@@ -4,7 +4,8 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("");
+            Console.Write("How big would you like to have a map? ");
+            //pytanie do gracza jak duża mapa
             //na samym początku wyświetla się plansza z grą
             //jest pod nią instrukcja
             //jak gracz wykona ruch to plansza się resetuje

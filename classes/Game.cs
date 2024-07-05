@@ -11,12 +11,14 @@ namespace EnergyRunner_v2.classes
         public int Size { get; set; }
         public int[,] Board { get; set; }
         private Random randomizer = new Random();
-        public Player player { get; set; }
-        public Home home { get; set; }
+        public Player Player { get; set; }
+        public Home Home { get; set; }
         public Game(int size)
         {
             Size = size;
             Board = new int[Size, Size];
+            Player = new Player();
+            Home = new Home(Size-1, Size-1);
             for(int i = 0; i < Size; i++)
             {
                 for (int j = 0; j < Size; j++)

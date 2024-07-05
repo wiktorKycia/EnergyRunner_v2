@@ -11,6 +11,8 @@ namespace EnergyRunner_v2.classes
         public int Size { get; set; }
         public int[,] Board { get; set; }
         private Random randomizer = new Random();
+        public Player player { get; set; }
+        public Home home { get; set; }
         public Game(int size)
         {
             Size = size;

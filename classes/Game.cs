@@ -17,7 +17,7 @@ namespace EnergyRunner_v2.classes
         {
             Size = size;
             Board = new int[Size, Size];
-            Player = new Player();
+            Player = new Player(size);
             Home = new Home(Size-1, Size-1);
             for(int i = 0; i < Size; i++)
             {

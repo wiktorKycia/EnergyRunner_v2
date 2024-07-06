@@ -15,11 +15,13 @@ namespace EnergyRunner_v2.classes
     {
         public override int PositionX { get; set; }
         public override int PositionY { get; set; }
+        public int Energy { get; set; }
 
-        public Player()
+        public Player(int boardSize)
         {
             PositionX = 0;
             PositionY = 0;
+            Energy = 10 * boardSize;
         }
 
         public void Move(Direction direction)

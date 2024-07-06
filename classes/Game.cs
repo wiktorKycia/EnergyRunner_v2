@@ -27,6 +27,12 @@ namespace EnergyRunner_v2.classes
                 }
             }
         }
-
+        // display the gameboard
+        /* 
+         * player in [0,0]
+         * home in [size,size]
+         * negative numbers in red (without minus)
+         * positive numbers in green
+         */
     }
 }

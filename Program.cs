@@ -10,6 +10,7 @@ namespace EnergyRunner_v2
             Game game = new Game(size);
             game.UpdateBoard();
             game.DisplayBoard();
+            game.GiveInstructions();
             //pytanie do gracza jak duża mapa
             //na samym początku wyświetla się plansza z grą
             //jest pod nią instrukcja

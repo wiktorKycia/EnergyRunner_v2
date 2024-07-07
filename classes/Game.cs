@@ -37,7 +37,7 @@ namespace EnergyRunner_v2.classes
         public void UpdateBoard()
         {
             Board[Player.PositionY, Player.PositionX] = 0;
-            Board[Size, Size] = 0;
+            Board[Home.PositionY, Home.PositionX] = 0;
         }
     }
 }

@@ -78,5 +78,14 @@ namespace EnergyRunner_v2.classes
                 Console.WriteLine();
             }
         }
+        public void GiveInstructions()
+        {
+            Console.WriteLine($"\nYou have {Player.Energy} energy");
+            Console.WriteLine("\nYou are \u2022");
+            Console.WriteLine("Your goal is to reach \u2302");
+            Console.WriteLine("You can move by clicking arrows on your keyboard");
+            Console.WriteLine("Green numbers can add you the energy, red numbers can subtract you the energy");
+            Console.WriteLine("Good luck!");
+        }
     }
 }

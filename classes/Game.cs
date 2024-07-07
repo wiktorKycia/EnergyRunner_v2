@@ -34,5 +34,10 @@ namespace EnergyRunner_v2.classes
          * negative numbers in red (without minus)
          * positive numbers in green
          */
+        public void UpdateBoard()
+        {
+            Board[Player.PositionY, Player.PositionX] = 0;
+            Board[Size, Size] = 0;
+        }
     }
 }

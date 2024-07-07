@@ -5,6 +5,7 @@
         static void Main(string[] args)
         {
             Console.Write("How big would you like to have a map? ");
+            int x = int.Parse(Console.ReadLine());
             //pytanie do gracza jak duża mapa
             //na samym początku wyświetla się plansza z grą
             //jest pod nią instrukcja

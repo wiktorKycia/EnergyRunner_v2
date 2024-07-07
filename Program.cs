@@ -29,10 +29,7 @@ namespace EnergyRunner_v2
                 }
                 else if (key.Key == ConsoleKey.RightArrow && game.Player.PositionX != game.Size - 1)
                 {
-                    Console.WriteLine($"{game.Player.PositionY}, {game.Player.PositionX}");
-                    Console.WriteLine($"{game.Board[0,1]}");
                     game.Player.Move(Direction.Right);
-                    Console.WriteLine($"{game.Player.PositionY}, {game.Player.PositionX}");
                     game.Player.Energy += game.Board[game.Player.PositionY, game.Player.PositionX];
                 }
                 else if (key.Key == ConsoleKey.LeftArrow && game.Player.PositionX != 0)
@@ -41,6 +38,7 @@ namespace EnergyRunner_v2
                     game.Player.Energy += game.Board[game.Player.PositionY, game.Player.PositionX];
                 }
                 //}
+                Console.Clear();
             }
             while (true);
             //pytanie do gracza jak duża mapa

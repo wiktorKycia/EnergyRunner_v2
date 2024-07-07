@@ -13,6 +13,31 @@ namespace EnergyRunner_v2
                 game.UpdateBoard();
                 game.DisplayBoard();
                 game.GiveInstructions();
+
+                //if (Console.KeyAvailable)
+                //{
+                    var key = Console.ReadKey(true);
+                    if (key.Key == ConsoleKey.UpArrow && game.Player.PositionY != 0)
+                    {
+                        game.Player.Move(Direction.Up);
+                        game.Player.Energy += game.Board[game.Player.PositionY, game.Player.PositionX];
+                    }
+                    else if (key.Key == ConsoleKey.DownArrow && game.Player.PositionY != game.Size - 1)
+                    {
+                        game.Player.Move(Direction.Down);
+                        game.Player.Energy += game.Board[game.Player.PositionY, game.Player.PositionX];
+                    }
+                    else if (key.Key == ConsoleKey.RightArrow && game.Player.PositionX != game.Size - 1)
+                    {
+                        game.Player.Move(Direction.Right);
+                        game.Player.Energy += game.Board[game.Player.PositionY, game.Player.PositionX];
+                    }
+                    else if (key.Key == ConsoleKey.LeftArrow && game.Player.PositionX != 0)
+                    {
+                        game.Player.Move(Direction.Left);
+                        game.Player.Energy += game.Board[game.Player.PositionY, game.Player.PositionX];
+                    }
+                //}
             }
             while (true);
             //pytanie do gracza jak duża mapa

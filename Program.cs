@@ -8,9 +8,13 @@ namespace EnergyRunner_v2
             Console.OutputEncoding = System.Text.Encoding.Unicode;
             int size = GetUserInput("How big would you like to have a map? ");
             Game game = new Game(size);
-            game.UpdateBoard();
-            game.DisplayBoard();
-            game.GiveInstructions();
+            do
+            {
+                game.UpdateBoard();
+                game.DisplayBoard();
+                game.GiveInstructions();
+            }
+            while (true);
             //pytanie do gracza jak duża mapa
             //na samym początku wyświetla się plansza z grą
             //jest pod nią instrukcja

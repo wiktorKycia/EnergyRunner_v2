@@ -5,6 +5,7 @@ namespace EnergyRunner_v2
     {
         static void Main(string[] args)
         {
+            Console.OutputEncoding = System.Text.Encoding.Unicode;
             int size = GetUserInput("How big would you like to have a map? ");
             Game game = new Game(size);
             game.UpdateBoard();

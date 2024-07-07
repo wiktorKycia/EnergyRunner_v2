@@ -54,7 +54,7 @@ namespace EnergyRunner_v2.classes
                     else if (Board[i, j] < 0)
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
-                        Console.Write(Board[i, j] + " ");
+                        Console.Write(Math.Abs(Board[i, j]) + " ");
                         Console.ResetColor();
                     }
                     else
@@ -63,12 +63,19 @@ namespace EnergyRunner_v2.classes
                         {
                             Console.Write("\u2022 ");
                         }
-                        else
+                        else if (i == Home.PositionY && j == Home.PositionX)
                         {
                             Console.Write("\u2302 ");
                         }
+                        else
+                        {
+                            Console.ForegroundColor = ConsoleColor.DarkYellow;
+                            Console.Write("  ");
+                            Console.ResetColor();
+                        }
                     }
                 }
+                Console.WriteLine();
             }
         }
     }

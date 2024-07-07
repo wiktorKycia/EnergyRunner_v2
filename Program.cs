@@ -16,27 +16,30 @@ namespace EnergyRunner_v2
 
                 //if (Console.KeyAvailable)
                 //{
-                    var key = Console.ReadKey(true);
-                    if (key.Key == ConsoleKey.UpArrow && game.Player.PositionY != 0)
-                    {
-                        game.Player.Move(Direction.Up);
-                        game.Player.Energy += game.Board[game.Player.PositionY, game.Player.PositionX];
-                    }
-                    else if (key.Key == ConsoleKey.DownArrow && game.Player.PositionY != game.Size - 1)
-                    {
-                        game.Player.Move(Direction.Down);
-                        game.Player.Energy += game.Board[game.Player.PositionY, game.Player.PositionX];
-                    }
-                    else if (key.Key == ConsoleKey.RightArrow && game.Player.PositionX != game.Size - 1)
-                    {
-                        game.Player.Move(Direction.Right);
-                        game.Player.Energy += game.Board[game.Player.PositionY, game.Player.PositionX];
-                    }
-                    else if (key.Key == ConsoleKey.LeftArrow && game.Player.PositionX != 0)
-                    {
-                        game.Player.Move(Direction.Left);
-                        game.Player.Energy += game.Board[game.Player.PositionY, game.Player.PositionX];
-                    }
+                var key = Console.ReadKey(true);
+                if (key.Key == ConsoleKey.UpArrow && game.Player.PositionY != 0)
+                {
+                    game.Player.Move(Direction.Up);
+                    game.Player.Energy += game.Board[game.Player.PositionY, game.Player.PositionX];
+                }
+                else if (key.Key == ConsoleKey.DownArrow && game.Player.PositionY != game.Size - 1)
+                {
+                    game.Player.Move(Direction.Down);
+                    game.Player.Energy += game.Board[game.Player.PositionY, game.Player.PositionX];
+                }
+                else if (key.Key == ConsoleKey.RightArrow && game.Player.PositionX != game.Size - 1)
+                {
+                    Console.WriteLine($"{game.Player.PositionY}, {game.Player.PositionX}");
+                    Console.WriteLine($"{game.Board[0,1]}");
+                    game.Player.Move(Direction.Right);
+                    Console.WriteLine($"{game.Player.PositionY}, {game.Player.PositionX}");
+                    game.Player.Energy += game.Board[game.Player.PositionY, game.Player.PositionX];
+                }
+                else if (key.Key == ConsoleKey.LeftArrow && game.Player.PositionX != 0)
+                {
+                    game.Player.Move(Direction.Left);
+                    game.Player.Energy += game.Board[game.Player.PositionY, game.Player.PositionX];
+                }
                 //}
             }
             while (true);

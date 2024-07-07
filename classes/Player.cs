@@ -8,7 +8,7 @@ namespace EnergyRunner_v2.classes
 {
     enum Direction
     {
-        Up, Right, Down, Left
+        Up=1, Right, Down, Left
     }
 
     internal class Player : BoardObject

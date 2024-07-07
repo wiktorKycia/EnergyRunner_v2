@@ -1,10 +1,14 @@
-﻿namespace EnergyRunner_v2
+﻿using EnergyRunner_v2.classes;
+namespace EnergyRunner_v2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int x = GetUserInput("How big would you like to have a map? ");
+            int size = GetUserInput("How big would you like to have a map? ");
+            Game game = new Game(size);
+            game.UpdateBoard();
+            game.DisplayBoard();
             //pytanie do gracza jak duża mapa
             //na samym początku wyświetla się plansza z grą
             //jest pod nią instrukcja

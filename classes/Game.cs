@@ -34,5 +34,42 @@ namespace EnergyRunner_v2.classes
          * negative numbers in red (without minus)
          * positive numbers in green
          */
+        public void UpdateBoard()
+        {
+            Board[Player.PositionY, Player.PositionX] = 0;
+            Board[Home.PositionY, Home.PositionX] = 0;
+        }
+        public void DisplayBoard()
+        {
+            for (int i = 0; i < Size; i++)
+            {
+                for (int j = 0; j < Size; j++)
+                {
+                    if (Board[i, j] > 0)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                        Console.Write(Board[i, j] + " ");
+                        Console.ResetColor();
+                    }
+                    else if (Board[i, j] < 0)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.Write(Board[i, j] + " ");
+                        Console.ResetColor();
+                    }
+                    else
+                    {
+                        if (i == Player.PositionY && j == Player.PositionX)
+                        {
+                            Console.Write("\u2022 ");
+                        }
+                        else
+                        {
+                            Console.Write("\u2302 ");
+                        }
+                    }
+                }
+            }
+        }
     }
 }

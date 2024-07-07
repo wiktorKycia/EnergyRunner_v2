@@ -15,5 +15,26 @@
             //jak tak to tworzy nową grę, 
             //a jak nie to wychodzi z gry
         }
+        static int GetUserInput(string message)
+        {
+            int result = 0;
+            do
+            {
+                try
+                {
+                    Console.Write(message);
+                    result = int.Parse(Console.ReadLine());
+                    if (result <= 0) { throw new FormatException(); }
+                    else { return result; }
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e.Message);
+                    Console.Write("The number must be a positive integer! Try again: ");
+                }
+            }
+            while(result <= 0);
+            return result;
+        }
     }
 }
